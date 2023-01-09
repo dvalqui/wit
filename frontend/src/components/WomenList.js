@@ -1,19 +1,20 @@
 import React from "react";
+import Box from '@mui/material/Box';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
 
-const WomenList = ({women}) => {
-   <ul>
+const WomenList = ({ women }) => (
+   <List>
 
- {women.map((woman, name) => <li key = {name}>{woman.name} </li>
-    )}
+      {women.map((woman) => <ListItem key={woman.id}>
+         <ListItemButton>{woman.name}</ListItemButton>
+      </ListItem>
+      )}
 
-    </ul>
-}
+   </List>
 
-
-
-
-
+)
 
 
-
-export default WomenList; 
+export default WomenList;

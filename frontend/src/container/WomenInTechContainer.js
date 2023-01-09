@@ -10,12 +10,15 @@ function WomenInTechContainer() {
     }
 
     useEffect(() => {
+
         fetchWomen();
     }, [])
 
     return (
         <>
             <h1>Important Women in Tech History</h1>
+            <WomenList women={women} />
+
         </>
     )
 }
